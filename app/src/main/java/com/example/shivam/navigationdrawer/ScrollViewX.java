@@ -7,7 +7,7 @@ import android.widget.ScrollView;
 
 public class ScrollViewX extends ScrollView{
 
-    private OnScrollViewListener mOnScrollViewListener;
+    private OnScrollChangeListener mOnScrollViewListener;
 
     public ScrollViewX(Context context) {
         super(context);
@@ -21,11 +21,11 @@ public class ScrollViewX extends ScrollView{
         super(context, attrs, defStyleAttr);
     }
 
-    public interface OnScrollViewListener{
+    public interface OnScrollChangeListener{
         void onScrollChanged(ScrollViewX view, int l, int t, int oldl, int oldt );
     }
 
-    public void setOnScrollViewListener(OnScrollViewListener l) {
+    public void setOnScrollChangeListener(OnScrollChangeListener l) {
         this.mOnScrollViewListener = l;
     }
 

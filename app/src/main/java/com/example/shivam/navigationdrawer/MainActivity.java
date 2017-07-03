@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(false);
 
         ScrollViewX scrollView = (ScrollViewX) findViewById(R.id.scroll_view);
-        scrollView.setOnScrollViewListener(new ScrollViewX.OnScrollViewListener() {
+        scrollView.setOnScrollChangeListener(new ScrollViewX.OnScrollChangeListener() {
             @Override
             public void onScrollChanged(ScrollViewX view, int l, int t, int oldl, int oldt) {
                 colorDrawable.setAlpha(getAlphaforActionBar(view.getScrollY()));
